@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
 	name='read-LVIS2-elevation',
-	version='1.0.0.0',
+	version='1.0.0.1',
 	description='Reads Operation IceBridge LVIS and LVIS Global Hawk Level-2 data products',
 	url='https://github.com/tsutterley/read-LVIS2-elevation',
 	author='Tyler Sutterley',
