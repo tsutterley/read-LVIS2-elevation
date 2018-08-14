@@ -3,10 +3,10 @@ read-LVIS2-elevation
 
 #### Reads Operation IceBridge LVIS and LVIS Global Hawk Level-2 data products
 
-- [IceBridge LVIS Level-2 Geolocated Surface Elevation Product](http://nsidc.org/data/ilvis2/)  
-- [IceBridge LVIS-GH Level-2 Geolocated Surface Elevation Product](http://nsidc.org/data/ilvgh2/)  
+- [IceBridge LVIS Level-2 Geolocated Surface Elevation Product](https://nsidc.org/data/ilvis2/)  
+- [IceBridge LVIS-GH Level-2 Geolocated Surface Elevation Product](https://nsidc.org/data/ilvgh2/)  
 - [Operation IceBridge LVIS Data Structure](https://lvis.gsfc.nasa.gov/Data/DataStructure.html)  
-- [NSIDC IceBridge Software Tools](http://nsidc.org/data/icebridge/tools.html)
+- [NSIDC IceBridge Software Tools](https://nsidc.org/data/icebridge/tools.html)
 - [Python program for retrieving Operation IceBridge data](https://github.com/tsutterley/nsidc-earthdata)
 
 #### Calling Sequence
