@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 u"""
 nsidc_convert_ILVIS2.py
-Written by Tyler Sutterley (07/2018)
+Written by Tyler Sutterley (12/2018)
 
 Program to read IceBridge Geolocated LVIS Elevation Product datafiles directly
 	from NSIDC server as bytes and output as HDF5 files
@@ -43,6 +43,8 @@ PYTHON DEPENDENCIES:
 		http://python-future.org/
 
 UPDATE HISTORY:
+	Updated 12/2018: decode authorization header for python3 compatibility
+	Updated 11/2018: encode base64 strings for python3 compatibility
 	Updated 07/2018 for public release
 """
 from __future__ import print_function
@@ -94,7 +96,7 @@ def nsidc_convert_ILVIS2(DIRECTORY, YEARS=None, SUBDIRECTORY=None, USER='',
 	password_mgr.add_password(None, 'https://urs.earthdata.nasa.gov',
 		USER, PASSWORD)
 	#-- Encode username/password for request authorization headers
-	base64_string = base64.b64encode('{0}:{1}'.format(USER, PASSWORD))
+	base64_string = base64.b64encode('{0}:{1}'.format(USER, PASSWORD).encode())
 	#-- compile HTML parser for lxml
 	parser = lxml.etree.HTMLParser()
 	#-- Create cookie jar for storing cookies. This is used to store and return
@@ -108,7 +110,8 @@ def nsidc_convert_ILVIS2(DIRECTORY, YEARS=None, SUBDIRECTORY=None, USER='',
 	    #urllib2.HTTPSHandler(debuglevel=1), # details of the requests/responses
 		urllib2.HTTPCookieProcessor(cookie_jar))
 	#-- add Authorization header to opener
-	opener.addheaders = [("Authorization", "Basic {0}".format(base64_string))]
+	authorization_header = "Basic {0}".format(base64_string.decode())
+	opener.addheaders = [("Authorization", authorization_header)]
 	#-- Now all calls to urllib2.urlopen use our opener.
 	urllib2.install_opener(opener)
 	#-- All calls to urllib2.urlopen will now use handler
