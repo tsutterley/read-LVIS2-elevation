@@ -538,7 +538,7 @@ def HDF5_icebridge_lvis(ILVIS2_MDS,LDS_VERSION,FILENAME=None,INPUT_FILE=None):
 
 
 	#-- Defining global attributes for output HDF5 file
-	fileID.attrs['featureType'] = 'timeSeries'
+	fileID.attrs['featureType'] = 'trajectory'
 	fileID.attrs['title'] = 'IceBridge LVIS L2 Geolocated Surface Elevation'
 	fileID.attrs['comment'] = ('Operation IceBridge products may include test '
 		'flight data that are not useful for research and scientific analysis. '

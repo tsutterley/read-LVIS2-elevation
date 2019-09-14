@@ -5,7 +5,7 @@ setup(
 	description='Reads Operation IceBridge LVIS and LVIS Global Hawk Level-2 data products',
 	url='https://github.com/tsutterley/read-LVIS2-elevation',
 	author='Tyler Sutterley',
-	author_email='tyler.c.sutterley@nasa.gov',
+	author_email='tsutterl@uw.edu',
 	license='MIT',
 	classifiers=[
 		'Development Status :: 3 - Alpha',
