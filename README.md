@@ -19,7 +19,7 @@ LVIS_L2_input = read_LVIS2_elevation('example_filename.TXT')
 Alternative program to read IceBridge Geolocated LVIS Elevation Product files directly from NSIDC server as bytes and output as HDF5 files  
 
 #### Dependencies
-- [numpy: Scientific Computing Tools For Python](http://www.numpy.org)
+- [numpy: Scientific Computing Tools For Python](https://numpy.org)
 - [h5py: Python interface for Hierarchal Data Format 5 (HDF5)](http://h5py.org)  
 - [lxml: processing XML and HTML in Python](https://pypi.python.org/pypi/lxml)
 - [future: Compatibility layer between Python 2 and Python 3](http://python-future.org/)  

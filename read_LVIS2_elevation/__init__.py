@@ -1,2 +1,3 @@
-from read_LVIS2_elevation import read_LVIS2_elevation
-from convert_julian import convert_julian
+import read_LVIS2_elevation.utilities
+from read_LVIS2_elevation.read_LVIS2_elevation import read_LVIS2_elevation
+from read_LVIS2_elevation.convert_julian import convert_julian
